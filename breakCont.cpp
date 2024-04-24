@@ -49,8 +49,27 @@ int main()
         cout << n << " is a prime number" << endl;
     }
 
-    cout << "print the all prime number from a to b" << endl;
-    // 7min
+    cout << "print the all prime number from a to b : " << endl;
+
+    int a, b;
+    cin >> a >> b;
+    int c;
+    for (c = a; c <= b; c++)
+    {
+        int j;
+        for (j = 2; j < c; j++)
+        {
+            if (c % j == 0)
+            {
+                cout << c << "-is not a prime number" << endl;
+                break;
+            }
+        }
+        if (j == c)
+        {
+            cout << c << "-is a prime number" << endl;
+        }
+    }
 
     return 0;
 }
